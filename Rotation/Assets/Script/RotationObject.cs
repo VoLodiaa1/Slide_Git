@@ -272,7 +272,7 @@ public class RotationObject : MonoBehaviour {
             IsHolding = true;
             
 			ObjetController.transform.Rotate (0, -pointer_x * SpeedFreeRotation, 0, Space.World);
-			ObjetController.transform.Rotate (pointer_y * SpeedFreeRotation, 0, 0, Space.World);
+			ObjetController.transform.Rotate (-pointer_y * SpeedFreeRotation, 0, 0, Space.World);
 
             if (ObjetController.GetComponent<PropertiesObj>().CanPaint == true)
             {
