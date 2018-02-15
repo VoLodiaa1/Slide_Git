@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2177,12 +2177,10 @@ MonoBehaviour:
   SpeedFreeRotation: 5
   bougeable: 0
   MatAPeindre: {fileID: 0}
-  Paintingbool: 0
   TimerAmount: 0
   rotateSpeed: 2
   rotationBase: {x: 0, y: 0, z: 0, w: 0}
   RotaArray: []
-  CanRollBack: 1
   IsHolding: 0
   RevertBool: 0
 --- !u!81 &2047977083
