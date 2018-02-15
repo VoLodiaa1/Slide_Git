@@ -34,7 +34,7 @@ public class RotationObject : MonoBehaviour {
 
     //painting
     public Material MatAPeindre;
-    public bool Paintingbool;
+    
 
     //rollback
     public float TimerAmount;
@@ -43,7 +43,7 @@ public class RotationObject : MonoBehaviour {
     bool RollbackInEffect;
     public Quaternion rotationBase;
     public Quaternion[] RotaArray;
-    public bool CanRollBack;
+    
     public bool IsHolding;
     public bool RevertBool;
 	// Use this for initialization
@@ -54,7 +54,7 @@ public class RotationObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (CanRollBack == true)
+        if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
         {
             Rollback();
         }
@@ -267,7 +267,7 @@ public class RotationObject : MonoBehaviour {
 			ObjetController.transform.Rotate (0, -Input.GetAxis ("Mouse X") * SpeedFreeRotation, 0, Space.World);
 			ObjetController.transform.Rotate (-Input.GetAxis ("Mouse Y") * SpeedFreeRotation, 0, 0, Space.World);
 
-            if (Paintingbool == true)
+            if (ObjetController.GetComponent<PropertiesObj>().CanPaint == true)
             {
                 if (Input.GetAxis("Mouse X") < 0 && Input.GetAxis("Mouse Y") < (-2*Input.GetAxis("Mouse X")) && Input.GetAxis("Mouse Y") >= (2 * Input.GetAxis("Mouse X")))
                 {
