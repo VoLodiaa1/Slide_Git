@@ -18,7 +18,7 @@ public class RotationObject : MonoBehaviour {
 	public float ClampingRotation;
 	public int TempsdeRecul;
 	public bool freerotation = false;
-	public float SpeedFreeRotation;
+	public int SpeedFreeRotation;
 
 
 	Vector2 firstPressPos;
@@ -46,18 +46,14 @@ public class RotationObject : MonoBehaviour {
     
     public bool IsHolding;
     public bool RevertBool;
-
-    float pointer_x;
-    float pointer_y;
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 		Orientationaudepart = ObjetController.transform.rotation;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
         if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
         {
             Rollback();
@@ -251,12 +247,8 @@ public class RotationObject : MonoBehaviour {
 		Debug.Log ("controlelibre");
 		VitesseDeRotation = 20;
 
-        if (Input.touchCount > 0)
-        {
-            pointer_x = Input.touches[0].deltaPosition.x;
-            pointer_y = Input.touches[0].deltaPosition.y;
-        }
-        if (bougeable == true && Input.GetKeyDown (KeyCode.Mouse0)) {
+
+		if (bougeable == true && Input.GetKeyDown (KeyCode.Mouse0)) {
 
 			playeable = true;
             if(RollbackInEffect == false)
@@ -272,29 +264,29 @@ public class RotationObject : MonoBehaviour {
 		if (playeable == true ) {
             IsHolding = true;
             
-			ObjetController.transform.Rotate (0, -pointer_x * SpeedFreeRotation, 0, Space.World);
-			ObjetController.transform.Rotate (pointer_y * SpeedFreeRotation, 0, 0, Space.World);
+			ObjetController.transform.Rotate (0, -Input.GetAxis ("Mouse X") * SpeedFreeRotation, 0, Space.World);
+			ObjetController.transform.Rotate (-Input.GetAxis ("Mouse Y") * SpeedFreeRotation, 0, 0, Space.World);
 
             if (ObjetController.GetComponent<PropertiesObj>().CanPaint == true)
             {
-                if (pointer_x < 0 && pointer_y < (-2*pointer_x) && pointer_y >= (2 * pointer_x))
+                if (Input.GetAxis("Mouse X") < 0 && Input.GetAxis("Mouse Y") < (-2*Input.GetAxis("Mouse X")) && Input.GetAxis("Mouse Y") >= (2 * Input.GetAxis("Mouse X")))
                 {
                     MatAPeindre.color = new Color(MatAPeindre.color.r, MatAPeindre.color.g, MatAPeindre.color.b - 0.1f);
                     Debug.Log("bleu");
                 }
 
-                if (pointer_x > 0 && pointer_y < (-2 * pointer_x) && pointer_y >= (2 * pointer_x))
+                if (Input.GetAxis("Mouse X") > 0 && Input.GetAxis("Mouse Y") < (-2 * Input.GetAxis("Mouse X")) && Input.GetAxis("Mouse Y") >= (2 * Input.GetAxis("Mouse X")))
                 {
                     MatAPeindre.color = new Color(MatAPeindre.color.r, MatAPeindre.color.g - 0.1f, MatAPeindre.color.b);
                     Debug.Log("green");
                 }
-                if (pointer_y < 0/* && pointer_x < (-2 * pointer_y) && pointer_x >= (2 * pointer_y)*/)
+                if (Input.GetAxis("Mouse Y") < 0/* && Input.GetAxis("Mouse X") < (-2 * Input.GetAxis("Mouse Y")) && Input.GetAxis("Mouse X") >= (2 * Input.GetAxis("Mouse Y"))*/)
                 {
                     MatAPeindre.color = new Color(MatAPeindre.color.r - 0.1f, MatAPeindre.color.g, MatAPeindre.color.b);
                     Debug.Log("Red");
                 }
 
-                if (pointer_y > 0 /*&& pointer_x < (-2 * pointer_y) && Input.GetAxis("Mouse X") >= (2 * pointer_y)*/)
+                if (Input.GetAxis("Mouse Y") > 0 /*&& Input.GetAxis("Mouse X") < (-2 * Input.GetAxis("Mouse Y")) && Input.GetAxis("Mouse X") >= (2 * Input.GetAxis("Mouse Y"))*/)
                 {
                     MatAPeindre.color = new Color(MatAPeindre.color.r + 0.1f, MatAPeindre.color.g + 0.1f, MatAPeindre.color.b + 0.1f);
                     Debug.Log("white");
