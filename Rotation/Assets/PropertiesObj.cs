@@ -5,6 +5,7 @@ using UnityEngine;
 public class PropertiesObj : MonoBehaviour {
     public bool CanRollBack;
     public bool CanPaint;
+    
     // Use this for initialization
     void Start () {
 		
