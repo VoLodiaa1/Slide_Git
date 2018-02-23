@@ -2115,7 +2115,7 @@ MonoBehaviour:
   ClampingRotation: 90
   TempsdeRecul: 600
   freerotation: 1
-  SpeedFreeRotation: 5
+  SpeedFreeRotation: 0.5
   bougeable: 0
   MatAPeindre: {fileID: 0}
   TimerAmount: 0

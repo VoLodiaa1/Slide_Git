@@ -1518,9 +1518,9 @@ MonoBehaviour:
   ClampingRotation: 90
   TempsdeRecul: 600
   freerotation: 1
-  SpeedFreeRotation: 5
+  SpeedFreeRotation: 0.5
   bougeable: 0
-  MatAPeindre: {fileID: 2100000, guid: e20e0c113b59f45498277d418bbbdc05, type: 2}
+  MatAPeindre: {fileID: 1358835782}
   TimerAmount: 5
   rotateSpeed: 2
   rotationBase: {x: 0, y: 0, z: 0, w: 0}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RotationObject : MonoBehaviour {
-
+    
 	Quaternion Orientationaudepart;
 
 	public Camera camerabase;
@@ -18,7 +18,7 @@ public class RotationObject : MonoBehaviour {
 	public float ClampingRotation;
 	public int TempsdeRecul;
 	public bool freerotation = false;
-	public float SpeedFreeRotation = 0.5f;
+    public float SpeedFreeRotation;
     float pointer_x;
     float pointer_y;
 
@@ -35,7 +35,7 @@ public class RotationObject : MonoBehaviour {
 	bool playeable;
 
     //painting
-    public Material MatAPeindre;
+    public GameObject MatAPeindre;
     
 
     //rollback
@@ -43,21 +43,27 @@ public class RotationObject : MonoBehaviour {
     float timer;
     public float rotateSpeed = 2f;
     bool RollbackInEffect;
+    bool RollbackInEffectClamped;
     public Quaternion rotationBase;
     public Quaternion[] RotaArray;
     
     public bool IsHolding;
     public bool RevertBool;
-	// Use this for initialization
-	void Start () {
+
+
+    public Vector2 PositionFinger;
+    // Use this for initialization
+    void Start () {
 		Orientationaudepart = ObjetController.transform.rotation;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (Input.touchCount > 0)
         {
+            PositionFinger = Input.touches[0].position;
             pointer_x = Input.touches[0].deltaPosition.x;
             pointer_y = Input.touches[0].deltaPosition.y;
         }
@@ -99,9 +105,7 @@ public class RotationObject : MonoBehaviour {
 		}
 
 
-		if (demarrageList == true) {
-			//StartCoroutine (recuperationRotation ());
-		}
+		
 
 		RaycastHit hit;
 		Ray ray	= camerabase.ScreenPointToRay (Input.mousePosition);
@@ -127,8 +131,17 @@ public class RotationObject : MonoBehaviour {
 		if (RotationToMakeX != 0 || RotationToMakeY != 0) {
 			ismoving = true;
 			RotationMovement ();
-		} else {
+            if(RollbackInEffectClamped == false)
+            {
+                rotationBase = ObjetController.transform.rotation;
+            }
+            else
+            {
+                RollbackInEffectClamped = false;
+            }
+        } else {
 			ismoving = false;
+            RollbackInEffectClamped = false;
 		}
 
 		if (Input.GetKeyDown (KeyCode.Z)) {
@@ -197,17 +210,17 @@ public class RotationObject : MonoBehaviour {
 
 			
 
-		if (Input.GetMouseButtonDown (0)&& bougeable == true) {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && bougeable == true) {
 			//save began touch 2d point
-			firstPressPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
+			firstPressPos = new Vector2 (Input.touches[0].deltaPosition.x, Input.touches[0].deltaPosition.y);
 			//Debug.Log ("activable");
 		}
-		if (Input.GetMouseButtonUp (0)) {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) {
 			//save ended touch 2d point
-			secondPressPos = new Vector2 (Input.mousePosition.x, Input.mousePosition.y);
+			secondPressPos = new Vector2(Input.touches[0].deltaPosition.x, Input.touches[0].deltaPosition.y);
 
-			//create vector from the two points
-			currentSwipe = new Vector2 (secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
+            //create vector from the two points
+            currentSwipe = new Vector2 (secondPressPos.x - firstPressPos.x, secondPressPos.y - firstPressPos.y);
 
 			//normalize the 2d vector
 			currentSwipe.Normalize ();
@@ -255,15 +268,21 @@ public class RotationObject : MonoBehaviour {
 		VitesseDeRotation = 20;
 
 
-		if (bougeable == true && Input.GetKeyDown (KeyCode.Mouse0)) {
+		if (bougeable == true && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
 
 			playeable = true;
             if(RollbackInEffect == false)
             {
                 rotationBase = ObjetController.transform.rotation;
+                
+            }
+            else
+            {
+                RollbackInEffect = false;
             }
 		}
-		if (Input.GetKeyUp (KeyCode.Mouse0)) {
+		if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) {
 			playeable = false;
             timer = 0;
 		}
@@ -273,29 +292,33 @@ public class RotationObject : MonoBehaviour {
             
 			ObjetController.transform.Rotate (0, -pointer_x * SpeedFreeRotation, 0, Space.World);
 			ObjetController.transform.Rotate (-pointer_y * SpeedFreeRotation, 0, 0, Space.World);
+            float red = MatAPeindre.GetComponent<Renderer>().material.color.r;
+            float blue;
+            float green;
+            float white;
 
             if (ObjetController.GetComponent<PropertiesObj>().CanPaint == true)
             {
                 if (pointer_x < 0 && pointer_y < (-2*pointer_x) && pointer_y >= (2 * pointer_x))
                 {
-                    MatAPeindre.color = new Color(MatAPeindre.color.r, MatAPeindre.color.g, MatAPeindre.color.b - 0.1f);
+                   MatAPeindre.GetComponent<Renderer>().material.color = new Color(MatAPeindre.GetComponent<Renderer>().material.color.r, MatAPeindre.GetComponent<Renderer>().material.color.g, Mathf.Lerp(MatAPeindre.GetComponent<Renderer>().material.color.b,0,-0.1f));
                     Debug.Log("bleu");
                 }
 
                 if (pointer_x > 0 && pointer_y < (-2 * pointer_x) && pointer_y >= (2 * pointer_x))
                 {
-                    MatAPeindre.color = new Color(MatAPeindre.color.r, MatAPeindre.color.g - 0.1f, MatAPeindre.color.b);
+                    MatAPeindre.GetComponent<Renderer>().material.color = new Color(MatAPeindre.GetComponent<Renderer>().material.color.r,Mathf.Lerp(MatAPeindre.GetComponent<Renderer>().material.color.g, 0,-0.1f), MatAPeindre.GetComponent<Renderer>().material.color.b);
                     Debug.Log("green");
                 }
                 if (pointer_y < 0/* && pointer_x < (-2 * pointer_y) && pointer_x >= (2 * pointer_y)*/)
                 {
-                    MatAPeindre.color = new Color(MatAPeindre.color.r - 0.1f, MatAPeindre.color.g, MatAPeindre.color.b);
+                    MatAPeindre.GetComponent<Renderer>().material.color = new Color(Mathf.Lerp(MatAPeindre.GetComponent<Renderer>().material.color.r, 0,-0.1f), MatAPeindre.GetComponent<Renderer>().material.color.g, MatAPeindre.GetComponent<Renderer>().material.color.b);
                     Debug.Log("Red");
                 }
 
                 if (pointer_y > 0 /*&& pointer_x < (-2 * pointer_y) && pointer_x >= (2 * pointer_y)*/)
                 {
-                    MatAPeindre.color = new Color(MatAPeindre.color.r + 0.1f, MatAPeindre.color.g + 0.1f, MatAPeindre.color.b + 0.1f);
+                    MatAPeindre.GetComponent<Renderer>().material.color = Color.Lerp(MatAPeindre.GetComponent<Renderer>().material.color, Color.white, 0.1f);
                     Debug.Log("white");
                 }
             }
@@ -314,7 +337,7 @@ public class RotationObject : MonoBehaviour {
     {
         if(IsHolding == true)
         {
-           //RotaArray = Extensions.AddItemToArray(RotaArray, ObjetController.transform.rotation);
+         //  RotaArray = Extensions.AddItemToArray(RotaArray, ObjetController.transform.rotation);
           
         }
         if(IsHolding == false/* && RotaArray.Length != 0*/)
@@ -330,6 +353,7 @@ public class RotationObject : MonoBehaviour {
             if (RollbackInEffect == true)
             {
                 ObjetController.transform.rotation = Quaternion.Lerp(ObjetController.transform.rotation, rotationBase, Time.deltaTime * rotateSpeed);
+                //StartCoroutine(RollBackActivated());
             }
             /*for (int i = RotaArray.Length - 1; i >= 0; i--)
             {
@@ -359,20 +383,21 @@ public class RotationObject : MonoBehaviour {
 
 
 
-    /*IEnumerator recuperationRotation () {
+    IEnumerator RollBackActivated()
+    {
+        for (int i = RotaArray.Length - 1; i >= 0; i--)
+        {
+            ObjetController.transform.Rotate(RotaArray[i].eulerAngles - ObjetController.transform.rotation.eulerAngles);
 
-		List <Quaternion> MyListOfRotation = new List<Quaternion> ();
+            //ObjetController.transform.rotation = RotaArray[i];
 
-		for (int i = 0; i < TempsdeRecul; i += 1) {
-			Debug.Log (i);
-			MyListOfRotation [i] = new Quaternion (ObjetController.transform.rotation.x, ObjetController.transform.rotation.y, ObjetController.transform.rotation.z, ObjetController.transform.rotation.w);
-			yield return null;
-		}
-
-		retourdansletemps = true;
-		demarrageList = false;
-
-	}*/
+            if (i == 0)
+            {
+                RotaArray = new Quaternion[0];
+            }
+        }
+        yield return null;
+    }
 
     }
 
