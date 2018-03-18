@@ -54,6 +54,7 @@ public class RotationObject : MonoBehaviour {
     public Vector2 PositionFinger;
     // Use this for initialization
     void Start () {
+		ObjetController = this.gameObject;
 		Orientationaudepart = ObjetController.transform.rotation;
 		
 	}
