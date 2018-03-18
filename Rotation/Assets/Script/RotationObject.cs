@@ -21,7 +21,7 @@ public class RotationObject : MonoBehaviour {
     public float SpeedFreeRotation;
     float pointer_x;
     float pointer_y;
-
+    public float DureeAppuie;
 
     Vector2 firstPressPos;
 	Vector2 secondPressPos;
@@ -63,6 +63,15 @@ public class RotationObject : MonoBehaviour {
         
         if (Input.touchCount > 0)
         {
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                case TouchPhase.Began:
+                    DureeAppuie = 0;
+                    break;
+
+            }
+            DureeAppuie += Time.deltaTime;
             PositionFinger = Input.touches[0].position;
             pointer_x = Input.touches[0].deltaPosition.x;
             pointer_y = Input.touches[0].deltaPosition.y;
@@ -293,9 +302,7 @@ public class RotationObject : MonoBehaviour {
 			ObjetController.transform.Rotate (0, -pointer_x * SpeedFreeRotation, 0, Space.World);
 			ObjetController.transform.Rotate (-pointer_y * SpeedFreeRotation, 0, 0, Space.World);
             float red = MatAPeindre.GetComponent<Renderer>().material.color.r;
-            float blue;
-            float green;
-            float white;
+            
 
             if (ObjetController.GetComponent<PropertiesObj>().CanPaint == true)
             {
