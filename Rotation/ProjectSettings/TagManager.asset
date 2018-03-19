@@ -8,6 +8,7 @@ TagManager:
   - ObjetFree
   - ObjetIncrementationn
   - ObjetIncrementation
+  - NvSuivant
   layers:
   - Default
   - TransparentFX

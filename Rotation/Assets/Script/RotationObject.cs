@@ -68,10 +68,11 @@ public class RotationObject : MonoBehaviour {
             pointer_x = Input.touches[0].deltaPosition.x;
             pointer_y = Input.touches[0].deltaPosition.y;
         }
-        if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
+        /*if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
         {
             Rollback();
-        }
+        }*/
+		
 		if (Input.GetKeyDown (KeyCode.R)) {
 			ObjetController.transform.rotation = Orientationaudepart;
 		}

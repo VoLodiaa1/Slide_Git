@@ -242,33 +242,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 70619784}
---- !u!114 &80336074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 80336073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &80336075 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -338,33 +311,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1202009518}
---- !u!114 &93771260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 93771259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &93771261 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -882,7 +828,6 @@ GameObject:
   - component: {fileID: 266348660}
   - component: {fileID: 266348656}
   - component: {fileID: 266348663}
-  - component: {fileID: 266348657}
   m_Layer: 0
   m_Name: Cross (41)
   m_TagString: ObjetIncrementation
@@ -916,33 +861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanRollBack: 0
   CanPaint: 0
---- !u!114 &266348657
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 266348654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!65 &266348658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1101,33 +1019,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 948146933}
---- !u!114 &281476937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 281476936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &281476938 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -1323,33 +1214,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 780234364}
---- !u!114 &301012837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 301012836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &301012838 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -1552,33 +1416,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 312552264}
---- !u!114 &327913248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 327913247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &327913249 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -1648,33 +1485,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1287789388}
---- !u!114 &331427150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 331427149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &331427151 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -1744,33 +1554,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1281840203}
---- !u!114 &379530047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 379530046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &379530048 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -1840,33 +1623,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 880052715}
---- !u!114 &390256235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 390256234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &390256236 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -2020,33 +1776,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 772395530}
---- !u!114 &493904719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 493904718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &493904720 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -2116,33 +1845,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 560134742}
---- !u!114 &496675370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 496675369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &496675371 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -2212,33 +1914,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1483862329}
---- !u!114 &519584345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 519584344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &519584346 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -2774,33 +2449,6 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1762748728}
---- !u!114 &697099116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 697099115}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &697099117 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -2933,33 +2581,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1561753451}
---- !u!114 &735468753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 735468752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &735468754 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -3029,33 +2650,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 204803287}
---- !u!114 &744581711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 744581710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &744581712 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -3209,33 +2803,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 180548470}
---- !u!114 &765068828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 765068827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &765068829 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -3375,6 +2942,7 @@ GameObject:
   - component: {fileID: 776304240}
   - component: {fileID: 776304239}
   - component: {fileID: 776304238}
+  - component: {fileID: 776304242}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3450,6 +3018,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &776304242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 776304237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camerabase: {fileID: 776304240}
+  ObjetController: {fileID: 0}
+  VitesseDeRotation: 1
+  ClampingRotation: 90
+  TempsdeRecul: 600
+  freerotation: 1
+  SpeedFreeRotation: 0.5
+  bougeable: 0
+  MatAPeindre: {fileID: 0}
+  TimerAmount: 0
+  rotateSpeed: 2
+  rotationBase: {x: 0, y: 0, z: 0, w: 0}
+  RotaArray: []
+  IsHolding: 0
+  RevertBool: 0
+  PositionFinger: {x: 0, y: 0}
 --- !u!1001 &780234364
 Prefab:
   m_ObjectHideFlags: 0
@@ -3528,7 +3123,6 @@ GameObject:
   - component: {fileID: 780919800}
   - component: {fileID: 780919796}
   - component: {fileID: 780919803}
-  - component: {fileID: 780919797}
   m_Layer: 0
   m_Name: Cross (39)
   m_TagString: ObjetIncrementation
@@ -3562,33 +3156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanRollBack: 0
   CanPaint: 0
---- !u!114 &780919797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780919794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!65 &780919798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3778,33 +3345,6 @@ RectTransform:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 131266142}
---- !u!114 &807737943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 807737942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &807737944 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -3958,33 +3498,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 272933290}
---- !u!114 &819550070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819550069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &819550071 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -4054,33 +3567,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1219214513}
---- !u!114 &842724545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 842724544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &842724546 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -4230,6 +3716,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 846836382}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &857649543
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.3190775
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -12.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.0257006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248956493139768, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 483482a3075fc9d40a86813d81958c36, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &859546394
 GameObject:
   m_ObjectHideFlags: 0
@@ -4465,33 +3993,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 2060968743}
---- !u!114 &887065854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 887065853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &887065855 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -4561,33 +4062,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1731722775}
---- !u!114 &902690650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 902690649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &902690651 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -4867,33 +4341,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1270634721}
---- !u!114 &963467880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 963467879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &963467881 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -5026,33 +4473,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 958729345}
---- !u!114 &1092029315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1092029314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1092029316 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -5122,33 +4542,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 2049123233}
---- !u!114 &1123721457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1123721456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1123721458 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -6121,33 +5514,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1160722281}
---- !u!114 &1281901500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1281901499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1281901501 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -6501,33 +5867,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1906561414}
---- !u!114 &1301673347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1301673346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1301673348 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -6681,33 +6020,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1873563136}
---- !u!114 &1337144861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1337144860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1337144862 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -6777,33 +6089,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1288055116}
---- !u!114 &1382287668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1382287667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1382287669 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -6873,33 +6158,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1550699246}
---- !u!114 &1402234004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1402234003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1402234005 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -7053,33 +6311,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1803735607}
---- !u!114 &1434496122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1434496121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1434496123 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -7422,33 +6653,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 285490102}
---- !u!114 &1524952070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1524952069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1524952071 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -7529,7 +6733,6 @@ GameObject:
   - component: {fileID: 1539091526}
   - component: {fileID: 1539091522}
   - component: {fileID: 1539091529}
-  - component: {fileID: 1539091523}
   m_Layer: 0
   m_Name: Cross (40)
   m_TagString: ObjetIncrementation
@@ -7563,33 +6766,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanRollBack: 0
   CanPaint: 0
---- !u!114 &1539091523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1539091520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!65 &1539091524
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8126,33 +7302,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 295858701}
---- !u!114 &1646696385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1646696384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1646696386 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -8390,33 +7539,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 987834175}
---- !u!114 &1686936616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1686936615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1686936617 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9055,33 +8177,6 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 583564588}
---- !u!114 &1861407233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1861407232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1861407234 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9340,33 +8435,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1464032130}
---- !u!114 &1914515768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1914515767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1914515769 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9436,33 +8504,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1497118185}
---- !u!114 &1936084327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1936084326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1936084328 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9532,33 +8573,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1604066160}
---- !u!114 &1954646483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1954646482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1954646484 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9628,33 +8642,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1819742494}
---- !u!114 &1961643725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1961643724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &1961643726 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -9934,33 +8921,6 @@ Prefab:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 1910205361}
---- !u!114 &2085810906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2085810905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &2085810907 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
@@ -10030,33 +8990,6 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
   m_PrefabInternal: {fileID: 714163253}
---- !u!114 &2086915672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2086915671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113b58cca5eee4144a1d4c1d5209f191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camerabase: {fileID: 776304240}
-  ObjetController: {fileID: 0}
-  VitesseDeRotation: 10
-  ClampingRotation: 90
-  TempsdeRecul: 0
-  freerotation: 0
-  SpeedFreeRotation: 0
-  bougeable: 1
-  MatAPeindre: {fileID: 0}
-  TimerAmount: 0
-  rotateSpeed: 2
-  rotationBase: {x: 0, y: 0, z: 0, w: 0}
-  RotaArray: []
-  IsHolding: 0
-  RevertBool: 0
-  PositionFinger: {x: 0, y: 0}
 --- !u!4 &2086915673 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: ad8bf736f6e603842a1f518f2b364d78, type: 3}
