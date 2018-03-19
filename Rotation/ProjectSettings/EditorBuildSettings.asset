@@ -20,3 +20,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scene/scene5.unity
     guid: d79363abdc3afd149a55e6cb33296087
+  - enabled: 1
+    path: Assets/scene2testfolder/woop.unity
+    guid: 7ca79689e07215d45be502279e5fc27e
+  - enabled: 1
+    path: Assets/scene2testfolder/woop2.unity
+    guid: 1a63c1598c85353468f2ffb6fe41edbc
+  - enabled: 1
+    path: Assets/scene2testfolder/woop3.unity
+    guid: c93a48214e030d24cade43e7c9133a57
+  - enabled: 1
+    path: Assets/scene2testfolder/woop4.unity
+    guid: 6772bea7fc251e44eb7836ddc1f777ef
+  - enabled: 1
+    path: Assets/scene2testfolder/woop5.unity
+    guid: 64f623ef3fa89444f94220648cb1f54f

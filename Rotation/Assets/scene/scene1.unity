@@ -1519,6 +1519,7 @@ MonoBehaviour:
   TempsdeRecul: 600
   freerotation: 1
   SpeedFreeRotation: 0.5
+  DureeAppuie: 0
   bougeable: 0
   MatAPeindre: {fileID: 1358835782}
   TimerAmount: 5
@@ -1527,6 +1528,7 @@ MonoBehaviour:
   RotaArray: []
   IsHolding: 0
   RevertBool: 0
+  PositionFinger: {x: 0, y: 0}
 --- !u!81 &2047977083
 AudioListener:
   m_ObjectHideFlags: 0

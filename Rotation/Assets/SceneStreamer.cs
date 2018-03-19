@@ -7,7 +7,7 @@ using System.Linq;
 public class SceneStreamer : MonoBehaviour {
     public List<string> SceneToLoad;
     public List<string> AllTheScenes;
-
+    public Transform CameraPosition;
 
     // Use this for initialization
     void Start () {
@@ -18,25 +18,39 @@ public class SceneStreamer : MonoBehaviour {
 	void Update () {
         
 	}
-    public void UnloadLoad()
+    private void OnTriggerEnter(Collider other)
     {
-        int IndScenes = SceneManager.sceneCount;
+        if (other.tag == "Player")
+        {
+            SceneStream();
+        }
+    }
 
-        for (int i = IndScenes-1; i >=0 ; i--)
+    public void SceneStream()
+    {
         {
-            AllTheScenes.Add(SceneManager.GetSceneAt(i).ToString());
-        }
-        IEnumerable ListSceneToUnload = AllTheScenes.Intersect(SceneToLoad);
-        foreach (string item2 in ListSceneToUnload)
-        {
-            StartCoroutine(UnloadAllTheScenes(item2));
-        }
-        foreach (string item in SceneToLoad)
-        {
-            StartCoroutine(LoadYourAsyncScene(item));
-        }
+            Camera CamToMove = FindObjectOfType<Camera>();
+            CamToMove.transform.position = CameraPosition.position;
 
-        
+            int IndScenes = SceneManager.sceneCount;
+
+            for (int i = IndScenes - 1; i >= 0; i--)
+            {
+                AllTheScenes.Add(SceneManager.GetSceneAt(i).ToString());
+            }
+            IEnumerable ListSceneToUnload = SceneToLoad.Except(AllTheScenes).ToList();
+            foreach (string item2 in ListSceneToUnload)
+            {
+                StartCoroutine(UnloadAllTheScenes(item2));
+                Debug.Log(item2);
+            }
+            foreach (string item in SceneToLoad)
+            {
+                StartCoroutine(LoadYourAsyncScene(item));
+            }
+
+
+        }
     }
     IEnumerator LoadYourAsyncScene(string scen)
     {
