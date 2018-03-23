@@ -1026,6 +1026,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CanRollBack: 1
   CanPaint: 1
+  TimerAmount: 2
+  rotateSpeed: 2
+  RollbackInEffect: 0
+  RollbackInEffectClamped: 0
+  rotationBase: {x: 0, y: 0, z: 0, w: 0}
+  RotaArray: []
 --- !u!4 &1358835792 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 97fa1b2920b852d4ea374abb57c2db5d, type: 3}
@@ -1513,7 +1519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camerabase: {fileID: 2047977085}
-  ObjetController: {fileID: 1358835782}
+  ObjetController: {fileID: 0}
   VitesseDeRotation: 1
   ClampingRotation: 90
   TempsdeRecul: 600
@@ -1521,7 +1527,7 @@ MonoBehaviour:
   SpeedFreeRotation: 0.5
   DureeAppuie: 0
   bougeable: 0
-  MatAPeindre: {fileID: 1358835782}
+  MatAPeindre: {fileID: 0}
   TimerAmount: 5
   rotateSpeed: 2
   rotationBase: {x: 0, y: 0, z: 0, w: 0}

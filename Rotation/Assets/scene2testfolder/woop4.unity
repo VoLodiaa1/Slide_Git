@@ -478,6 +478,7 @@ MonoBehaviour:
   SceneToLoad: []
   AllTheScenes: []
   CameraPosition: {fileID: 1835066212}
+  NameOfScene: woop4
 --- !u!1 &1835066211
 GameObject:
   m_ObjectHideFlags: 0

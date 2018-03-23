@@ -308,13 +308,9 @@ MonoBehaviour:
   - woop2
   - woop3
   - woop4
-  AllTheScenes:
-  - woop
-  - woop2
-  - woop3
-  - woop4
-  - woop5
+  AllTheScenes: []
   CameraPosition: {fileID: 1265635966}
+  NameOfScene: woop
 --- !u!4 &1188083095
 Transform:
   m_ObjectHideFlags: 0
