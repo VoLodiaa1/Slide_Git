@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4506303, g: 0.49864376, b: 0.5644727, a: 1}
+  m_IndirectSpecularColor: {r: 0.18320554, g: 0.22682628, b: 0.29466465, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2197,6 +2197,7 @@ MonoBehaviour:
   RotaArray: []
   IsHolding: 0
   RevertBool: 0
+  PositionFinger: {x: 0, y: 0}
 --- !u!81 &2047977083
 AudioListener:
   m_ObjectHideFlags: 0
