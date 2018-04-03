@@ -9,6 +9,7 @@ public class SceneStreamer : MonoBehaviour {
     public List<string> AllTheScenes;
     public Transform CameraPosition;
     public string NameOfScene;
+    public float speed = 0.1f;
 
     // Use this for initialization
     void Start () {
@@ -25,7 +26,7 @@ public class SceneStreamer : MonoBehaviour {
         if (other.tag == "Player")
         {
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(NameOfScene));
-            Debug.Log("woopidiwoop");
+           // Debug.Log("woopidiwoop");
             SceneStream();
         }
     }
@@ -34,7 +35,8 @@ public class SceneStreamer : MonoBehaviour {
     {
         
         Camera CamToMove = FindObjectOfType<Camera>();
-            CamToMove.transform.position = CameraPosition.position;
+        //  CamToMove.transform.position = CameraPosition.position;
+        StartCoroutine(MoveToPosition());
 
             StartCoroutine(CountTheScenes());
 
@@ -43,24 +45,44 @@ public class SceneStreamer : MonoBehaviour {
         SceneToLoadandCurrent.Add(NameOfScene);
         foreach (var item in SceneToLoadandCurrent)
         {
-            Debug.Log(item);
+            //Debug.Log(item);
         }
-        IEnumerable ListSceneToUnload = AllTheScenes.Except(SceneToLoadandCurrent).ToList();
+        IEnumerable<string> ListSceneToUnload = AllTheScenes.Except(SceneToLoadandCurrent).ToList();
+        IEnumerable<string> ListSceneToLoad = SceneToLoad.Except(AllTheScenes).ToList();
 
-            
-            
-            foreach (string item2 in ListSceneToUnload)
+        DebugEnumerable("SceneToLoadandCurrent", SceneToLoadandCurrent);
+        DebugEnumerable("AllTheScenes", AllTheScenes);
+        DebugEnumerable("SceneToLoad", SceneToLoad);
+        DebugEnumerable("ListSceneToUnload", ListSceneToUnload);
+        DebugEnumerable("ListSceneToLoad", ListSceneToLoad);
+
+
+
+        foreach (string item2 in ListSceneToUnload)
             {
                 StartCoroutine(UnloadAllTheScenes(item2));
                 
             }
-            foreach (string item in SceneToLoad)
+            foreach (string item in ListSceneToLoad)
             {
                 StartCoroutine(LoadYourAsyncScene(item));
             }
 
 
         
+    }
+
+    IEnumerator MoveToPosition()
+    {
+        Camera CamToMove = FindObjectOfType<Camera>();
+        float step = speed * Time.deltaTime;
+        while (CamToMove.transform.position != CameraPosition.position)
+        {
+            CamToMove.transform.position = Vector3.MoveTowards(CamToMove.transform.position, CameraPosition.position, step);
+        }
+        
+
+        yield return null;
     }
     IEnumerator LoadYourAsyncScene(string scen)
     {
@@ -88,7 +110,7 @@ public class SceneStreamer : MonoBehaviour {
     }
     IEnumerator UnloadAllTheScenes(string scen)
     {
-        Debug.Log("unload");
+       
         // The Application loads the Scene in the background at the same time as the current Scene.
         //This is particularly good for creating loading screens. You could also load the Scene by build //number.
         AsyncOperation asyncLoad = SceneManager.UnloadSceneAsync(scen);
@@ -98,5 +120,15 @@ public class SceneStreamer : MonoBehaviour {
         {
             yield return null;
         }
+    }
+
+    void DebugEnumerable<T>(string name, IEnumerable<T> collection)
+    {
+        string description = name + ": ";
+        foreach(T element in collection)
+        {
+            description += element + " ";
+        }
+        
     }
 }

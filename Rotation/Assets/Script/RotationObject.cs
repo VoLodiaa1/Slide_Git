@@ -60,7 +60,7 @@ namespace Rotation
         {
 
             DontDestroyOnLoad(gameObject);
-            Orientationaudepart = ObjetController.transform.rotation;
+           // Orientationaudepart = ObjetController.transform.rotation;
 
         }
 
@@ -82,6 +82,25 @@ namespace Rotation
                 PositionFinger = Input.touches[0].position;
                 pointer_x = Input.touches[0].deltaPosition.x;
                 pointer_y = Input.touches[0].deltaPosition.y;
+            }
+            RaycastHit hit;
+            Ray ray = camerabase.ScreenPointToRay(PositionFinger);
+            bougeable = false;
+            if (Physics.Raycast(ray, out hit) && playeable == false && ismoving == false)
+            {
+                //Debug.Log ("OK");
+                if (hit.transform.tag == "ObjetFree")
+                {
+                    freerotation = true;
+                    ObjetController = hit.transform.gameObject;
+                    bougeable = true;
+                }
+                if (hit.transform.tag == "ObjetIncrementation")
+                {
+                    freerotation = false;
+                    ObjetController = hit.transform.gameObject;
+                    bougeable = true;
+                }
             }
             /*if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
             {
@@ -132,25 +151,7 @@ namespace Rotation
 
 
 
-            RaycastHit hit;
-            Ray ray = camerabase.ScreenPointToRay(Input.mousePosition);
-            bougeable = false;
-            if (Physics.Raycast(ray, out hit) && playeable == false && ismoving == false)
-            {
-                //Debug.Log ("OK");
-                if (hit.transform.tag == "ObjetFree")
-                {
-                    freerotation = true;
-                    ObjetController = hit.transform.gameObject;
-                    bougeable = true;
-                }
-                if (hit.transform.tag == "ObjetIncrementation")
-                {
-                    freerotation = false;
-                    ObjetController = hit.transform.gameObject;
-                    bougeable = true;
-                }
-            }
+           
 
             if (ismoving == false && freerotation == false)
             {
@@ -328,23 +329,23 @@ namespace Rotation
                 playeable = true;
                 if (ObjetController.GetComponent<PropertiesObj>().RollbackInEffect == false)
                 {
-                    ObjetController.GetComponent<PropertiesObj>().rotationBase = ObjetController.transform.rotation;
+                    ObjetController.GetComponent<PropertiesObj>().rotationBase = ObjetController.transform.rotation.eulerAngles;
 
                 }
                 else
                 {
-                    RollbackInEffect = false;
+                    ObjetController.GetComponent<PropertiesObj>().RollbackInEffect = false;
                 }
             }
             if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
             {
                 playeable = false;
-                timer = 0;
+                ObjetController.GetComponent<PropertiesObj>().timer = 0;
             }
 
             if (playeable == true)
             {
-                IsHolding = true;
+                ObjetController.GetComponent<PropertiesObj>().IsHolding = true;
 
                 ObjetController.transform.Rotate(0, -pointer_x * SpeedFreeRotation, 0, Space.World);
                 ObjetController.transform.Rotate(pointer_y * SpeedFreeRotation, 0, 0, Space.World);
@@ -380,7 +381,7 @@ namespace Rotation
 
             else
             {
-                IsHolding = false;
+                ObjetController.GetComponent<PropertiesObj>().IsHolding = false;
             }
 
 
@@ -389,12 +390,12 @@ namespace Rotation
 
         public void Rollback()
         {
-            if (IsHolding == true)
+            if (ObjetController.GetComponent<PropertiesObj>().IsHolding == true)
             {
                 //  RotaArray = Extensions.AddItemToArray(RotaArray, ObjetController.transform.rotation);
 
             }
-            if (IsHolding == false/* && RotaArray.Length != 0*/)
+            if (ObjetController.GetComponent<PropertiesObj>().IsHolding == false/* && RotaArray.Length != 0*/)
             {
                 if (timer <= TimerAmount)
                 {
@@ -425,7 +426,7 @@ namespace Rotation
             if (ObjetController.transform.rotation == rotationBase && ObjetController.GetComponent<PropertiesObj>().RollbackInEffect == true)
             {
 
-                RollbackInEffect = false;
+                ObjetController.GetComponent<PropertiesObj>().RollbackInEffect = false;
             }
         }
 
@@ -441,9 +442,9 @@ namespace Rotation
         {
             for (int i = RotaArray.Length - 1; i >= 0; i--)
             {
-                ObjetController.transform.Rotate(RotaArray[i].eulerAngles - ObjetController.transform.rotation.eulerAngles);
+                //ObjetController.transform.Rotate(RotaArray[i].eulerAngles - ObjetController.transform.rotation.eulerAngles);
 
-                //ObjetController.transform.rotation = RotaArray[i];
+                ObjetController.transform.rotation = RotaArray[i];
 
                 if (i == 0)
                 {

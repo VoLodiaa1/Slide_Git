@@ -10,17 +10,20 @@ namespace Rotation
 
 
         public float TimerAmount;
-        float timer;
+        public float timer;
         public float rotateSpeed = 2f;
         public bool RollbackInEffect;
        public bool RollbackInEffectClamped;
-        public Quaternion rotationBase;
-        public Quaternion[] RotaArray;
+        public Vector3 rotationBase;
+        public Vector3[] RotaArray;
+        
 
         RotationObject Cam;
+        public bool IsHolding;
         // Use this for initialization
         void Start()
         {
+            rotationBase = transform.rotation.eulerAngles;
             Cam = FindObjectOfType<Camera>().GetComponent<RotationObject>();
         }
 
@@ -35,12 +38,13 @@ namespace Rotation
 
         public void Rollback()
         {
-            if (Cam.IsHolding == true)
+            if (IsHolding == true)
             {
-                //  RotaArray = Extensions.AddItemToArray(RotaArray, ObjetController.transform.rotation);
+                
+                 RotaArray = Extensions.AddItemToArray(RotaArray, transform.rotation.eulerAngles);
 
             }
-            if (Cam.IsHolding == false/* && RotaArray.Length != 0*/)
+            if (IsHolding == false/* && RotaArray.Length != 0*/)
             {
                 if (timer <= TimerAmount)
                 {
@@ -52,8 +56,8 @@ namespace Rotation
                 }
                 if (RollbackInEffect == true)
                 {
-                    transform.rotation = Quaternion.Lerp(transform.rotation, rotationBase, Time.deltaTime * rotateSpeed);
-                    //StartCoroutine(RollBackActivated());
+                    //transform.rotation = Quaternion.Lerp(transform.rotation, rotationBase, Time.deltaTime * rotateSpeed);
+                    StartCoroutine(RollBackActivated());
                 }
                 /*for (int i = RotaArray.Length - 1; i >= 0; i--)
                 {
@@ -68,10 +72,11 @@ namespace Rotation
                 }*/
 
             }
-            if (transform.rotation == rotationBase && RollbackInEffect == true)
+            if (transform.rotation.eulerAngles == rotationBase && RollbackInEffect == true)
             {
 
                 RollbackInEffect = false;
+                
             }
         }
 
@@ -87,16 +92,18 @@ namespace Rotation
         {
             for (int i = RotaArray.Length - 1; i >= 0; i--)
             {
-                transform.Rotate(RotaArray[i].eulerAngles - transform.rotation.eulerAngles);
+               // transform.Rotate(RotaArray[i]);
 
-                //ObjetController.transform.rotation = RotaArray[i];
+                transform.rotation =Quaternion.Euler(RotaArray[i].x, RotaArray[i].y, RotaArray[i].z);
 
                 if (i == 0)
                 {
-                    RotaArray = new Quaternion[0];
+                    RotaArray = new Vector3[0];
+                    yield break;
                 }
+                yield return null;
             }
-            yield return null;
+            
         }
     }
 }
