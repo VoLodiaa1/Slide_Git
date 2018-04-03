@@ -4,9 +4,9 @@ using UnityEngine;
 
 public static class Extensions {
 
-    public static Quaternion[] AddItemToArray(this Quaternion[] original, Quaternion itemToAdd)
+    public static Vector3[] AddItemToArray(this Vector3[] original, Vector3 itemToAdd)
     {
-        Quaternion[] finalArray = new Quaternion[original.Length + 1];
+        Vector3[] finalArray = new Vector3[original.Length + 1];
         for (int i = 0; i < original.Length; i++)
         {
             finalArray[i] = original[i];
