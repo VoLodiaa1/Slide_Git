@@ -8,7 +8,11 @@ TagManager:
   - ObjetFree
   - ObjetIncrementationn
   - ObjetIncrementation
+<<<<<<< HEAD
   - NvSuivant
+=======
+  - feuille
+>>>>>>> TestGraphiques
   layers:
   - Default
   - TransparentFX
