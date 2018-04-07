@@ -15,7 +15,8 @@ namespace Rotation
         public bool RollbackInEffect;
        public bool RollbackInEffectClamped;
         public Vector3 rotationBase;
-        public Vector3[] RotaArray;
+        public List<Vector3> RotaArray;
+        //public Vector3[] RotaArray;
         
 
         RotationObject Cam;
@@ -41,14 +42,14 @@ namespace Rotation
             if (IsHolding == true)
             {
                 
-                 RotaArray = Extensions.AddItemToArray(RotaArray, transform.rotation.eulerAngles);
+                 RotaArray.Add(transform.rotation.eulerAngles);
 
             }
             if (IsHolding == false/* && RotaArray.Length != 0*/)
             {
                 if (timer <= TimerAmount)
                 {
-                    timer += Time.deltaTime;
+                    //timer += Time.deltaTime;
                 }
                 else
                 {
@@ -90,15 +91,16 @@ namespace Rotation
 
         IEnumerator RollBackActivated()
         {
-            for (int i = RotaArray.Length - 1; i >= 0; i--)
+            for (int i = RotaArray.Count - 1; i >= 0; i--)
             {
                // transform.Rotate(RotaArray[i]);
 
                 transform.rotation =Quaternion.Euler(RotaArray[i].x, RotaArray[i].y, RotaArray[i].z);
+                RotaArray.RemoveAt(i);
 
                 if (i == 0)
                 {
-                    RotaArray = new Vector3[0];
+                    RotaArray = new List<Vector3>();
                     yield break;
                 }
                 yield return null;
