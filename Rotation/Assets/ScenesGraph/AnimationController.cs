@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimationController : MonoBehaviour {
-	public AnimationCurve In, Out, StrechVertical,StrechHorizontal;
+	public AnimationCurve In, Out, StrechVertical,StrechHorizontal,Fall,Etirement;
 	// Use this for initialization
 	SkinnedMeshRenderer DeformerRenderer;
 	float transitionspeed;
@@ -15,7 +15,9 @@ public class AnimationController : MonoBehaviour {
 	Rigidbody rb;
 	[Range (0, 30)]
 	public float Smooth;
-	public float AplatiDeformTime,MoveDeformTime,OutMoveDeformTime;
+	public float AplatiDeformTime,MoveDeformTime,OutMoveDeformTime,Putain, EtirementTime;
+
+	public ParticleSystem Splash;
 	
 	//private float timer;
 	
@@ -38,10 +40,81 @@ public class AnimationController : MonoBehaviour {
 		{
 			float x = (Time.time - timer)/AplatiDeformTime;
 			DeformerRenderer.SetBlendShapeWeight(select, StrechHorizontal.Evaluate(x)*100f);
+
+			if(DeformerRenderer.GetBlendShapeWeight(0)>0f)
+			{
+			DeformerRenderer.SetBlendShapeWeight(0, Out.Evaluate(x)*100f);
+			}
+
+				if(DeformerRenderer.GetBlendShapeWeight(1)>0f)
+			{
+			DeformerRenderer.SetBlendShapeWeight(1, Out.Evaluate(x)*100f);
+			}
+
+				if(DeformerRenderer.GetBlendShapeWeight(2)>0f)
+			{
+			DeformerRenderer.SetBlendShapeWeight(2, Out.Evaluate(x)*100f);
+			}
+				if(DeformerRenderer.GetBlendShapeWeight(3)>0f)
+			{
+			DeformerRenderer.SetBlendShapeWeight(3, Out.Evaluate(x)*100f);
+			}
+				if(DeformerRenderer.GetBlendShapeWeight(5)>0f)
+			{
+			DeformerRenderer.SetBlendShapeWeight(5, Out.Evaluate(x)*100f);
+			}
 	   		yield return null;
 		}
 	
 	}
+
+	 IEnumerator Leave(int select){
+		
+		float timer = Time.time;
+		print("arrondis toi");
+	
+		while(Time.time -timer < Putain)
+		{
+			float x = (Time.time - timer)/Putain;
+			DeformerRenderer.SetBlendShapeWeight(select, StrechVertical.Evaluate(x)*100f);
+	   		yield return null;
+		}
+	
+	}
+
+	 IEnumerator Falling(int select){
+		
+		float timer = Time.time;
+		print("forme gouttedeau");
+	
+		while(Time.time -timer < Putain)
+		{
+			float x = (Time.time - timer)/Putain;
+			DeformerRenderer.SetBlendShapeWeight(select, Fall.Evaluate(x)*100f);
+			
+	   		yield return null;
+		}
+	
+	}
+
+	IEnumerator Etire(){
+		
+		float timer = Time.time;
+		print("étire toi");
+	
+		while(Time.time -timer < EtirementTime)
+		{
+			float x = (Time.time - timer)/EtirementTime;
+				DeformerRenderer.SetBlendShapeWeight(3, Etirement.Evaluate(x)*100f);
+			
+	   		yield return null;
+		}
+	
+	}
+
+
+
+
 
 	 IEnumerator OneShootIn(int select){
 		
@@ -88,6 +161,7 @@ public class AnimationController : MonoBehaviour {
 	
 	}
 
+
 	
 	
 	
@@ -101,6 +175,7 @@ public class AnimationController : MonoBehaviour {
 			
 			StartCoroutine(Arrival(4));
 			
+			
 
 			
 		}				
@@ -111,6 +186,8 @@ public class AnimationController : MonoBehaviour {
 		if(col.gameObject.tag == "feuille")
 		{
 			IsFalling=false;
+			Splash.time=0;
+			Splash.Play();
 
 		}
 	}
@@ -123,12 +200,22 @@ public class AnimationController : MonoBehaviour {
 			IsFalling=true;
 			StopAllCoroutines();
 			StartCoroutine(OneShootOut());
+			StartCoroutine(Leave(5));
+			StartCoroutine(Falling(2));
+
 			//StopCoroutine(ResetBall());
 			//StartCoroutine(FallingBall());
+		}				
+	}
 
+	void OnCollisionExit(Collision col)
+	{
+		if(col.gameObject.tag == "feuille")
+		{
+			//IsFalling=false;
 			
 
-		}				
+		}
 	}
 
 	void LerpRotationOut()
@@ -143,16 +230,17 @@ public class AnimationController : MonoBehaviour {
 
 		if(IsFalling==false)
 		{
-			if(rb.velocity.x<-0.5f)
+			if(rb.velocity.x<-0.25f)
 			{
 				CurrentState= AnimState.Left;
 				StopCoroutine(OneShootIn(0));
+
 				DeformerRenderer.SetBlendShapeWeight(0,0);
 				StartCoroutine(OneShootIn(1));
 				//AnimState.Left
 
 			}
-			else if (rb.velocity.x>0.5f) 
+			else if (rb.velocity.x>0.25f) 
 			{
 				CurrentState= AnimState.Right;
 				StopCoroutine(OneShootIn(1));
@@ -163,6 +251,9 @@ public class AnimationController : MonoBehaviour {
 			else
 			{
 				CurrentState= AnimState.Normal;
+				StopCoroutine(OneShootIn(1));
+				StopCoroutine(OneShootIn(0));
+				StartCoroutine(OneShootOut());
 			}
 		}else{
 			LerpRotationOut ();
