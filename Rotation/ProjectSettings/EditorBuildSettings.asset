@@ -4,4 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/scene/scene3.unity
+    guid: aa6e795c2b35a1546b3a4772f346b5f0
+  - enabled: 1
+    path: Assets/scene2testfolder/woop.unity
+    guid: 7ca79689e07215d45be502279e5fc27e
+  - enabled: 1
+    path: Assets/scene2testfolder/woop2.unity
+    guid: 1a63c1598c85353468f2ffb6fe41edbc
+  - enabled: 1
+    path: Assets/scene2testfolder/woop3.unity
+    guid: c93a48214e030d24cade43e7c9133a57
+  - enabled: 1
+    path: Assets/scene2testfolder/woop4.unity
+    guid: 6772bea7fc251e44eb7836ddc1f777ef
+  - enabled: 1
+    path: Assets/scene2testfolder/woop5.unity
+    guid: 64f623ef3fa89444f94220648cb1f54f
+  - enabled: 1
+    path: Assets/scene2testfolder/Cam&Player.unity
+    guid: fa5b749421227b14fafb09c03e5079fe

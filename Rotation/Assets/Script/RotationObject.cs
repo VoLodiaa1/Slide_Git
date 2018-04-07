@@ -49,7 +49,8 @@ namespace Rotation
         bool RollbackInEffect;
         bool RollbackInEffectClamped;
         public Quaternion rotationBase;
-        public Quaternion[] RotaArray;
+        public List<Quaternion> RotaArray;
+       // public Quaternion[] RotaArray;
 
         public bool IsHolding;
         public bool RevertBool;
@@ -572,15 +573,18 @@ public class RotationObject : MonoBehaviour {
 
         IEnumerator RollBackActivated()
         {
-            for (int i = RotaArray.Length - 1; i >= 0; i--)
+            for (int i = RotaArray.Count - 1; i >= 0; i--)
             {
                 //ObjetController.transform.Rotate(RotaArray[i].eulerAngles - ObjetController.transform.rotation.eulerAngles);
 
                 ObjetController.transform.rotation = RotaArray[i];
-
+                RotaArray.RemoveAt(i);
+                
+               
+                   
                 if (i == 0)
                 {
-                    RotaArray = new Quaternion[0];
+                    RotaArray = new List<Quaternion>();
                 }
             }
             yield return null;
