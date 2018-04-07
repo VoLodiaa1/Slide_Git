@@ -41,6 +41,7 @@ namespace Rotation
         public GameObject MatAPeindre;
 
 
+<<<<<<< HEAD
         //rollback
         public float TimerAmount;
         float timer;
@@ -58,12 +59,75 @@ namespace Rotation
         public Vector2 PositionFinger;
         // Use this for initialization
         void Start()
+=======
+public class RotationObject : MonoBehaviour {
+    
+	Quaternion Orientationaudepart;
+
+	public Camera camerabase;
+
+	public GameObject ObjetController;
+
+	float RotationToMakeX;
+	float RotationToMakeY;
+
+
+	public float VitesseDeRotation;
+	public float ClampingRotation;
+	public int TempsdeRecul;
+	public bool freerotation = false;
+    public float SpeedFreeRotation;
+    float pointer_x;
+    float pointer_y;
+
+
+    Vector2 firstPressPos;
+	Vector2 secondPressPos;
+	Vector2 currentSwipe;
+
+	public bool bougeable = false;
+	bool ismoving = false;
+	bool demarrageList = false;
+	bool retourdansletemps = false;
+	bool oneframe = false;
+	bool playeable;
+
+    //painting
+    public GameObject MatAPeindre;
+    
+
+    //rollback
+    public float TimerAmount;
+    float timer;
+    public float rotateSpeed = 2f;
+    bool RollbackInEffect;
+    bool RollbackInEffectClamped;
+    public Quaternion rotationBase;
+    public Quaternion[] RotaArray;
+    
+    public bool IsHolding;
+    public bool RevertBool;
+
+
+    public Vector2 PositionFinger;
+    // Use this for initialization
+    void Start () {
+		Orientationaudepart = ObjetController.transform.rotation;
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        
+        if (Input.touchCount > 0)
+>>>>>>> LD
         {
 
             DontDestroyOnLoad(gameObject);
            // Orientationaudepart = ObjetController.transform.rotation;
 
         }
+<<<<<<< HEAD
 
         // Update is called once per frame
         void Update()
@@ -136,6 +200,74 @@ namespace Rotation
             }
 
             if (freerotation == true)
+=======
+        /*if (ObjetController.GetComponent<PropertiesObj>().CanRollBack == true)
+        {
+            Rollback();
+        }*/
+		
+		if (Input.GetKeyDown (KeyCode.R)) {
+			ObjetController.transform.rotation = Orientationaudepart;
+		}
+
+		oneframe = false;
+
+		if (Input.GetKeyDown (KeyCode.F)) {
+			if (freerotation == false && oneframe == false) {
+				Debug.Log ("true");
+				freerotation = true;
+				oneframe = true;
+
+			}
+		}
+		if (Input.GetKeyDown (KeyCode.F)) {
+			if (freerotation == true && oneframe == false) {
+				//Debug.Log ("false");
+				freerotation = false;
+				oneframe = true;
+
+			}
+		}
+
+		if (freerotation == true) {
+			ControleLibre ();
+		} else {
+			VitesseDeRotation = 3;
+		}
+			
+		if (ismoving == true) {
+			demarrageList = true;
+		}
+
+
+		
+
+		RaycastHit hit;
+		Ray ray	= camerabase.ScreenPointToRay (Input.mousePosition);
+		bougeable = false;
+		if (Physics.Raycast (ray, out hit) && playeable == false && ismoving == false) {
+			//Debug.Log ("OK");
+			if (hit.transform.tag == "ObjetFree") {
+				freerotation = true;
+				ObjetController = hit.transform.gameObject;
+				bougeable = true;
+			}
+			if (hit.transform.tag == "ObjetIncrementation") {
+				freerotation = false;
+				ObjetController = hit.transform.gameObject;
+				bougeable = true;
+			}
+		}
+
+		if (ismoving == false && freerotation == false) {
+			Swipe ();
+		}
+
+		if (RotationToMakeX != 0 || RotationToMakeY != 0) {
+			ismoving = true;
+			RotationMovement ();
+            if(RollbackInEffectClamped == false)
+>>>>>>> LD
             {
                 ControleLibre();
             }
